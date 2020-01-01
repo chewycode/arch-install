@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 read -p "Enter computer name: " computername
-if [[ -z "$userInput" ]]; then
+if [[ -z "$computername" ]]; then
    printf '%s\n' "No computer name entered. Exiting..."
    exit 1
 fi
