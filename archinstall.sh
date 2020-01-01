@@ -12,6 +12,6 @@ pacstrap /mnt base base-devel linux linux-firmware sudo nano pacman-contrib curl
 genfstab -U /mnt >> /mnt/etc/fstab
 mkdir /mnt/root/arch-install
 cp -ar /root/arch-install/ /mnt/root/arch-install/
-arch-chroot /mnt sh /root/0-chroot.sh
+arch-chroot /mnt /root/0-chroot.sh
 
 reboot
