@@ -11,7 +11,7 @@ mount /dev/sda1 /mnt
 pacstrap /mnt base base-devel linux linux-firmware sudo nano pacman-contrib curl git wget grub dhcpcd 
 genfstab -U /mnt >> /mnt/etc/fstab
 mkdir /mnt/root/arch-install
-cp -ar /root/arch-install/ /mnt/root/arch-install/
+cp -ar /root/arch-install/ /mnt/root/
 arch-chroot /mnt /root/arch-install/0-chroot.sh
 
 #reboot
