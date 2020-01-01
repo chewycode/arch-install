@@ -3,10 +3,27 @@
 
 # get user input for computer name
 read -p "Enter computer name: " computername
-if [[ -z "$computername" ]]; then
-   printf '%s\n' "No computer name entered. Exiting..."
-   exit 1
-fi
+while [ -z $username ]
+do
+        read -p "Error! Please enter computer name: " computername
+done
+echo "Computer name set as $computername"
+
+# get user name
+read -p "Enter username to create: " username
+while [ -z $username ]
+do
+        read -p "Error! Please enter new username: " username
+done
+
+# Add user
+useradd -m -G wheel,users -s /bin/bash $username
+echo "Choose password for $username"
+passwd $username
+
+# edit sudoers file
+echo '%wheel ALL=(ALL:ALL) ALL' | sudo EDITOR='tee -a' visudo
+echo "$username ALL=(ALL) NOPASSWD:ALL" | sudo EDITOR='tee -a' visudo
 
 # update mirror list
 mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
