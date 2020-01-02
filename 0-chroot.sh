@@ -3,7 +3,7 @@
 
 # get user input for computer name
 read -p "Enter computer name: " computername
-while [ -z $username ]
+while [ -z $computername ]
 do
         read -p "Error! Please enter computer name: " computername
 done
