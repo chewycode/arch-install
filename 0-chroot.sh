@@ -7,7 +7,9 @@ while [ -z $computername ]
 do
         read -p "Error! Please enter computer name: " computername
 done
+echo
 echo "Computer name set as $computername"
+echo
 
 # get user name
 read -p "Enter username to create: " username
@@ -17,6 +19,7 @@ do
 done
 
 # Add user
+echo
 useradd -m -G wheel,users -s /bin/bash $username
 echo "Choose password for $username"
 passwd $username
