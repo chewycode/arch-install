@@ -4,6 +4,8 @@ Basic bash script to install Arch Linux.
 This installs Arch Linux onto 1 partion on /dev/sda.
 This does not create a swap partition.  It creates a swap file which is easier to resize in the future.
 
+This is mainly to install Arch onto virtual machines on Virtualbox and VMware.  You could adapt it to install on a host system.
+
 <h3>Instructions</h3>
 
 Download Arch Linux from https://www.archlinux.org/download/
