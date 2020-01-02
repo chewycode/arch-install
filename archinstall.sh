@@ -14,4 +14,4 @@ mkdir /mnt/root/arch-install
 cp -ar /root/arch-install/ /mnt/root/
 arch-chroot /mnt /root/arch-install/0-chroot.sh
 
-#reboot
+reboot
