@@ -8,7 +8,7 @@ parted /dev/sda set 1 boot on
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
 
-pacstrap /mnt base base-devel linux linux-firmware sudo nano pacman-contrib curl git wget grub dhcpcd 
+pacstrap /mnt base base-devel linux linux-firmware sudo nano pacman-contrib curl git wget grub dhcpcd xdg-user-dirs
 genfstab -U /mnt >> /mnt/etc/fstab
 mkdir /mnt/root/arch-install
 cp -ar /root/arch-install/ /mnt/root/
