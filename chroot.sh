@@ -32,9 +32,12 @@ echo "$username ALL=(ALL) NOPASSWD:ALL" | sudo EDITOR='tee -a' visudo
 echo
 
 #create swap file
-read -p "Enter in swap file size (example: 512M, 2G, etc)" swapsize
-if [ -z "$swapsize" ] && ["$swapsize" != 0]
+read -p "Enter in swap file size (example: 512M, 2G, etc)\nLeave blank to not create swap.\n" swapsize
+if [ -z "$swapsize" ]
 then
+        echo "swap file not created"
+        echo
+else
         fallocate -l $swapsize /swapfile
         chmod 600 /swapfile
         mkswap /swapfile
