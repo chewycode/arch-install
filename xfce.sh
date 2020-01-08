@@ -5,8 +5,8 @@ pacman -S xorg-server xorg-apps xorg-xinit xterm --noconfirm --needed
 
 # Install a display manager
 pacman -S lightdm --noconfirm --needed
-sudo pacman -S lightdm-gtk-greeter lightdm-gtk-greeter-settings --noconfirm --needed
-sudo systemctl enable lightdm.service
+pacman -S lightdm-gtk-greeter lightdm-gtk-greeter-settings --noconfirm --needed
+systemctl enable lightdm.service
 
 # Install graphic envionment
 pacman -S xfce4 xfce4-goodies --noconfirm --needed
