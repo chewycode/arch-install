@@ -35,6 +35,7 @@ PKGS=(
             # SYSTEM --------------------------------------------------------------
 
             'linux-lts'             # Long term support kernel
+            'linux-lts-headers'     # Headers for linux-lts
 
             # TERMINAL UTILITIES --------------------------------------------------
 
