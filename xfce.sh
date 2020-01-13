@@ -101,13 +101,7 @@ for PKG in "${PKGS[@]}"; do
 done
 
 # ------------------------------------------------------------------------
-echo
-echo "Configuring MAKEPKG to use all 4 cores"
 
-sudo sed -i -e 's|[#]*MAKEFLAGS=.*|MAKEFLAGS="-j$(nproc)"|g' makepkg.conf
-sudo sed -i -e 's|[#]*COMPRESSXZ=.*|COMPRESSXZ=(xz -c -T 4 -z -)|g' makepkg.conf
-
-# ------------------------------------------------------------------------
 echo
 echo "Increasing file watcher count"
 
