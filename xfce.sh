@@ -14,9 +14,6 @@ pacman -S xfce4 xfce4-goodies picom --noconfirm --needed
 # Install audio stuff
 pacman -S alsa-utils alsa-plugins pulseaudio pulseaudio-alsa pavucontrol --noconfirm --needed
 
-# turn off xfwm4's compositing feature
-xfconf-query -c xfwm4 -p /general/use_compositing -s false
-
 # Install the rest of packages
 PKGS=(
             # ----------Printer Setup-----------------------------
