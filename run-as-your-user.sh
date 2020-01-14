@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# turn off xfwm4's compositing feature
+xfconf-query -c xfwm4 -p /general/use_compositing -s false
+
 # make picom(compton) autostart
 mkdir -p ${HOME}/.config/autostart/
 cat <<EOF > ${HOME}/.config/autostart/picom.desktop
