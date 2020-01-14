@@ -109,8 +109,20 @@ echo "Increasing file watcher count"
 
 # This prevents a "too many files" error in Visual Studio Code
 echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf && sudo sysctl --system
+
 # ------------------------------------------------------------------------
+
 echo
 echo "Enabling the cups service daemon so we can print"
 
 systemctl enable org.cups.cupsd.service
+
+# ------------------------------------------------------------------------
+
+echo
+echo "Configuring LTS Kernel as a secondary boot option"
+
+sudo cp /boot/loader/entries/arch.conf /boot/loader/entries/arch-lts.conf
+sudo sed -i 's|Arch Linux|Arch Linux LTS Kernel|g' /boot/loader/entries/arch-lts.conf
+sudo sed -i 's|vmlinuz-linux|vmlinuz-linux-lts|g' /boot/loader/entries/arch-lts.conf
+sudo sed -i 's|initramfs-linux.img|initramfs-linux-lts.img|g' /boot/loader/entries/arch-lts.conf
