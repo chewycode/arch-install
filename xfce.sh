@@ -9,7 +9,7 @@ pacman -S lightdm-gtk-greeter lightdm-gtk-greeter-settings --noconfirm --needed
 systemctl enable lightdm.service
 
 # Install graphic envionment
-pacman -S xfce4 xfce4-goodies --noconfirm --needed
+pacman -S xfce4 xfce4-goodies picom --noconfirm --needed
 
 # Install audio stuff
 pacman -S alsa-utils alsa-plugins pulseaudio pulseaudio-alsa pavucontrol --noconfirm --needed
@@ -25,7 +25,6 @@ PKGS=(
             'cups-pdf'              # PDF support for cups
             'ghostscript'           # PostScript interpreter
             'gsfonts'               # Adobe Postscript replacement fonts
-            'hplip'                 # HP Drivers
             'system-config-printer' # Printer setup  utility
             
             # ----------Fonts-------------------------------------
@@ -76,7 +75,7 @@ PKGS=(
             # WEB TOOLS -----------------------------------------------------------
 
             'filezilla'             # FTP Client
-            'firfox'                # Web Browser
+            'firefox'                # Web Browser
 
             # COMMUNICATIONS ------------------------------------------------------
 
