@@ -24,12 +24,13 @@ PKGS=(
             'gsfonts'               # Adobe Postscript replacement fonts
             'system-config-printer' # Printer setup  utility
             
-            # ----------Fonts-------------------------------------
+            # ----------Appearence-------------------------------------
             
             'ttf-dejavu'
             'ttf-droid'
             'ttf-liberation'
             'terminus-font'         # Font package with some bigger fonts for login terminal
+            'papirus-icon-theme'
             
             # SYSTEM --------------------------------------------------------------
 
