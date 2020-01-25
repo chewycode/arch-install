@@ -16,4 +16,4 @@ sudo pacman -S rxvt-unicode ranger rofi conky dmenu --noconfirm --needed
 sudo pacman -S atool highlight browsh elinks mediainfo w3m ffmpegthumbnailer mupdf --noconfirm --needed
 
 #configure startx command
-echo "exec i3" > $HOME/.xinitrc
+echo "exec i3" >> $HOME/.xinitrc
