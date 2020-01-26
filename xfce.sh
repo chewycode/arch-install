@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# update
+pacman -Syu --noconfirm --needed
+
 # Install display server
 pacman -S xorg-server xorg-apps xorg-xinit xterm --noconfirm --needed
 
