@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # install xorg
-sudo pacman -S open-vm-tools xf86-input-vmmouse xf86-video-vmware mesa --noconfirm --needed
+sudo pacman -S gtkmm open-vm-tools xf86-input-vmmouse xf86-video-vmware mesa --noconfirm --needed
 
 # enable services
 sudo systemctl enable --now vmtoolsd.service
