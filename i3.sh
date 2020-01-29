@@ -10,10 +10,11 @@ sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont ttf-lib
 pacman -S alsa-utils alsa-plugins pulseaudio pulseaudio-alsa pavucontrol --noconfirm --needed
 
 # basic terminal stuff
-sudo pacman -S rxvt-unicode ranger rofi conky dmenu --noconfirm --needed
+sudo pacman -S rxvt-unicode xterm ranger rofi conky dmenu --noconfirm --needed
 
 # terminal and ranger tools
 sudo pacman -S atool highlight browsh elinks mediainfo w3m ffmpegthumbnailer mupdf --noconfirm --needed
 
 #configure startx command
+echo "[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources" >> $HOME/.xinitrc
 echo "exec i3" >> $HOME/.xinitrc
